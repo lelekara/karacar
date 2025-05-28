@@ -15,6 +15,7 @@ datasource db {
   directUrl = env("DIRECT_URL")
 }
 
+
 model User {  
   id            String      @id
   email         String    @unique
@@ -23,6 +24,10 @@ model User {
   image         String?
   createdAt     DateTime
   updatedAt     DateTime
+  role          String? @default("user")
+  banned        Boolean @default(false)
+  bannedReason  String? @default("")
+  banExpires    DateTime?
   sessions      Session[]
   accounts      Account[]
   annonces  Annonce[]
@@ -40,6 +45,7 @@ model Session {
   ipAddress String?
   userAgent String?
   userId    String
+  impersonatedBy String? // Optional field for impersonation
   user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
 
   @@unique([token])

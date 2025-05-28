@@ -42,18 +42,18 @@ export default function SignUp() {
 	};
 
 	return (
-		<Card className="z-50 rounded-md rounded-t-none max-w-md">
+		<Card className="mx-auto mt-10 w-full max-w-md p-6 shadow-lg">
 			<CardHeader>
-				<CardTitle className="text-lg md:text-xl">Sign Up</CardTitle>
+				<CardTitle className="text-lg md:text-xl">Inscription</CardTitle>
 				<CardDescription className="text-xs md:text-sm">
-					Enter your information to create an account
+					Entrez vos informations pour créer un compte.
 				</CardDescription>
 			</CardHeader>
 			<CardContent>
 				<div className="grid gap-4">
 					<div className="grid grid-cols-2 gap-4">
 						<div className="grid gap-2">
-							<Label htmlFor="first-name">First name</Label>
+							<Label htmlFor="first-name">Prénom</Label>
 							<Input
 								id="first-name"
 								placeholder="Max"
@@ -65,7 +65,7 @@ export default function SignUp() {
 							/>
 						</div>
 						<div className="grid gap-2">
-							<Label htmlFor="last-name">Last name</Label>
+							<Label htmlFor="last-name">Nom</Label>
 							<Input
 								id="last-name"
 								placeholder="Robinson"
@@ -91,29 +91,29 @@ export default function SignUp() {
 						/>
 					</div>
 					<div className="grid gap-2">
-						<Label htmlFor="password">Password</Label>
+						<Label htmlFor="password">Mot de passe</Label>
 						<Input
 							id="password"
 							type="password"
 							value={password}
 							onChange={(e) => setPassword(e.target.value)}
 							autoComplete="new-password"
-							placeholder="Password"
+							placeholder="Mot de passe"
 						/>
 					</div>
 					<div className="grid gap-2">
-						<Label htmlFor="password">Confirm Password</Label>
+						<Label htmlFor="password">Confirmer mot de passe</Label>
 						<Input
 							id="password_confirmation"
 							type="password"
 							value={passwordConfirmation}
 							onChange={(e) => setPasswordConfirmation(e.target.value)}
 							autoComplete="new-password"
-							placeholder="Confirm Password"
+							placeholder="Confirmer mot de passe"
 						/>
 					</div>
 					<div className="grid gap-2">
-						<Label htmlFor="image">Profile Image (optional)</Label>
+						<Label htmlFor="image">Image de profile (optionel)</Label>
 						<div className="flex items-end gap-4">
 							{imagePreview && (
 								<div className="relative w-16 h-16 rounded-sm overflow-hidden">
@@ -155,7 +155,7 @@ export default function SignUp() {
 								password,
 								name: `${firstName} ${lastName}`,
 								image: image ? await convertImageToBase64(image) : "",
-								callbackURL: "/dashboard",
+								callbackURL: "/admin/dashboard",
 								fetchOptions: {
 									onResponse: () => {
 										setLoading(false);
@@ -167,7 +167,7 @@ export default function SignUp() {
 										toast.error(ctx.error.message);
 									},
 									onSuccess: async () => {
-										router.push("/dashboard");
+										router.push("/admin/dashboard");
 									},
 								},
 							});
@@ -176,7 +176,7 @@ export default function SignUp() {
 						{loading ? (
 							<Loader2 size={16} className="animate-spin" />
 						) : (
-							"Create an account"
+							"Créer un compte"
 						)}
 					</Button>
 				</div>
@@ -184,7 +184,7 @@ export default function SignUp() {
 			<CardFooter>
 				<div className="flex justify-center w-full border-t py-4">
 					<p className="text-center text-xs text-neutral-500">
-						Secured by <span className="text-orange-400">better-auth.</span>
+						Sécuriser par <span className="text-orange-400">better-auth.</span>
 					</p>
 				</div>
 			</CardFooter>
