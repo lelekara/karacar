@@ -9,7 +9,6 @@ import { useState } from "react";
 import { Loader2, Key } from "lucide-react";
 import { signIn } from "@/lib/auth-client";
 import Link from "next/link";
-import { cn } from "@/lib/utils";
 
 export default function SignIn() {
   const [email, setEmail] = useState("");
@@ -18,11 +17,11 @@ export default function SignIn() {
   const [rememberMe, setRememberMe] = useState(false);
 
   return (
-    <Card className="max-w-md">
+    <Card className="mx-auto mt-10 w-full max-w-md p-6 shadow-lg">
       <CardHeader>
-        <CardTitle className="text-lg md:text-xl">Sign In</CardTitle>
+        <CardTitle className="text-lg md:text-xl">Connexion</CardTitle>
         <CardDescription className="text-xs md:text-sm">
-          Enter your email below to login to your account
+          Entrez vos informations de connexion pour accéder à votre compte.
         </CardDescription>
       </CardHeader>
       <CardContent>
@@ -43,19 +42,19 @@ export default function SignIn() {
 
             <div className="grid gap-2">
               <div className="flex items-center">
-                <Label htmlFor="password">Password</Label>
+                <Label htmlFor="password">Mot de passe</Label>
                 <Link
                     href="#"
                     className="ml-auto inline-block text-sm underline"
                   >
-                    Forgot your password?
+                    Mot de passe oublié?
                   </Link>
               </div>
 
               <Input
                 id="password"
                 type="password"
-                placeholder="password"
+                placeholder="Votre mot de passe"
                 autoComplete="password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
@@ -69,11 +68,8 @@ export default function SignIn() {
                     setRememberMe(!rememberMe);
                   }}
                 />
-                <Label htmlFor="remember">Remember me</Label>
+                <Label htmlFor="remember">Se souvenir de moi</Label>
               </div>
-
-          
-
           <Button
               type="submit"
               className="w-full"
@@ -98,11 +94,15 @@ export default function SignIn() {
               {loading ? (
                 <Loader2 size={16} className="animate-spin" />
               ) : (
-                <p> Login </p>
+                <p> Connexion </p>
               )}
               </Button>
-
-          
+            <div className="text-center text-sm mt-4">
+              <span>Pas encore de compte? </span>
+              <Link href="/sign-up" className="text-gray-500 hover:underline">
+                Inscrivez-vous
+              </Link>
+              </div>
 
           
         </div>
