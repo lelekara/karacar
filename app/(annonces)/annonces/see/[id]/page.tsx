@@ -340,7 +340,7 @@ const AnnonceDetail: React.FC = () => {
                     Notre équipe est à votre disposition pour répondre à toutes vos questions.
                   </p>
                   <Button variant="outline" className="border-amber-700 text-amber-700 hover:bg-amber-50">
-                    Demander plus d'infos
+                    <a href="/contact">Demander plus d'infos</a>
                   </Button>
                 </div>
               </CardContent>

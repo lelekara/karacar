@@ -64,11 +64,6 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/services" className="text-amber-200 hover:text-amber-100 transition-colors text-sm sm:text-base">
-                  Services
-                </Link>
-              </li>
-              <li>
                 <Link href="/about" className="text-amber-200 hover:text-amber-100 transition-colors text-sm sm:text-base">
                   À propos
                 </Link>
@@ -91,11 +86,6 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/services/reprise" className="text-amber-200 hover:text-amber-100 transition-colors text-sm sm:text-base">
-                  Reprise de véhicules
-                </Link>
-              </li>
-              <li>
                 <Link href="/services/financement" className="text-amber-200 hover:text-amber-100 transition-colors text-sm sm:text-base">
                   Financement
                 </Link>
@@ -103,11 +93,6 @@ export default function Footer() {
               <li>
                 <Link href="/services/garantie" className="text-amber-200 hover:text-amber-100 transition-colors text-sm sm:text-base">
                   Garantie
-                </Link>
-              </li>
-              <li>
-                <Link href="/services/entretien" className="text-amber-200 hover:text-amber-100 transition-colors text-sm sm:text-base">
-                  Entretien
                 </Link>
               </li>
             </ul>
@@ -149,7 +134,7 @@ export default function Footer() {
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-6 text-center md:text-left">
               <p className="text-amber-200 text-xs sm:text-sm">
-                © 2024 AutoPremium. Tous droits réservés.
+                © 2025 AutoPremium. Tous droits réservés.
               </p>
               <div className="flex flex-wrap justify-center md:justify-start space-x-3 sm:space-x-4 text-xs sm:text-sm">
                 <Link href="/legal/mentions" className="text-amber-200 hover:text-amber-100 transition-colors">

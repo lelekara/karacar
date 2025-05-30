@@ -32,7 +32,7 @@ export default function Home() {
               size="lg"
               className="border-amber-200 text-amber-100 hover:bg-amber-100 hover:text-amber-950 px-6 sm:px-8 py-3 text-base sm:text-lg h-12 sm:h-auto"
             >
-              Nous contacter
+              <a href="/contact">Nous contacter</a>
             </Button>
           </div>
         </div>

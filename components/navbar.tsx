@@ -54,13 +54,6 @@ export default function Navbar() {
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-amber-700 transition-all group-hover:w-full"></span>
             </Link>
             <Link
-              href="/services"
-              className="text-stone-700 hover:text-amber-800 font-medium transition-colors relative group"
-            >
-              Services
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-amber-700 transition-all group-hover:w-full"></span>
-            </Link>
-            <Link
               href="/contact"
               className="text-stone-700 hover:text-amber-800 font-medium transition-colors relative group"
             >
@@ -77,7 +70,7 @@ export default function Navbar() {
               className="border-amber-700 text-amber-700 hover:bg-amber-50"
               asChild
             >
-              <Link href="/contact">
+              <Link href="https://wa.me/324XXXXXXXX" target="_blank">
                 <Phone className="w-4 h-4 mr-2" />
                 Nous appeler
               </Link>
@@ -158,13 +151,6 @@ export default function Navbar() {
               Nos véhicules
             </Link>
             <Link
-              href="/services"
-              className="block text-stone-700 hover:text-amber-800 font-medium py-2"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Services
-            </Link>
-            <Link
               href="/contact"
               className="block text-stone-700 hover:text-amber-800 font-medium py-2"
               onClick={() => setIsMenuOpen(false)}
@@ -179,7 +165,7 @@ export default function Navbar() {
                 className="w-full border-amber-700 text-amber-700 hover:bg-amber-50"
                 asChild
               >
-                <Link href="/contact">
+                <Link href="https://wa.me/324XXXXXXXX" target="_blank">
                   <Phone className="w-4 h-4 mr-2" />
                   Nous appeler
                 </Link>
